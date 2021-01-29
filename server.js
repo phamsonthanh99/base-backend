@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-    res.send('Hello World sdfgsdfg!');
+app.get('/', (req, res, next) => {
+    res.json({ message: 'Hello world !' });
 });
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
